@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengaduan — Pembatalan Spinjam | Shopee</title>
+    <style>
+        *{box-sizing:border-box;margin:0;padding:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;}
+        :root {
+            --shopee-orange: #EE4D2D;
+            --shopee-dark: #D93E1F;
+            --wa-green: #25D366;
+            --wa-green-dark: #1DA854;
+        }
+        body{
+            background: linear-gradient(135deg, #FFF4F0 0%, #FFE8E0 100%);
+            min-height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:20px;
+        }
+        .card{
+            background:#fff;
+            border-radius:24px;
+            width:100%;
+            max-width:420px;
+            box-shadow:0 10px 40px rgba(238,77,45,0.15);
+            overflow:hidden;
+            animation: fadeInUp 0.6s ease-out;
+        }
+        @keyframes fadeInUp {
+            from { opacity:0; transform: translateY(30px); }
+            to { opacity:1; transform: translateY(0); }
+        }
+        .header{
+            background: linear-gradient(135deg, var(--shopee-orange) 0%, var(--shopee-dark) 100%);
+            padding:30px 24px;
+            text-align:center;
+            position:relative;
+            overflow:hidden;
+        }
+        .header::before{
+            content:'';
+            position:absolute;
+            width:150px;
+            height:150px;
+            background:rgba(255,255,255,0.1);
+            border-radius:50%;
+            top:-60px;
+            right:-30px;
+        }
+        .logo-area{
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            gap:10px;
+            margin-bottom:10px;
+            position:relative;
+            z-index:1;
+        }
+        .logo-icon{font-size:32px; animation: bounce 2s infinite;}
+        @keyframes bounce {
+            0%,100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        .logo-text{color:#fff;font-size:24px;font-weight:900;letter-spacing:-0.5px;}
+        .header-title{color:#fff;font-size:16px;font-weight:600;margin-top:8px;position:relative;z-index:1;}
+        .content{padding:36px 24px;text-align:center;}
+        .icon{font-size:72px;margin-bottom:16px;animation: pulse 2s infinite;}
+        @keyframes pulse {
+            0%,100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .title{font-size:22px;font-weight:800;color:#222;margin-bottom:10px;line-height:1.4;}
+        .subtitle{font-size:15px;color:#777;margin-bottom:36px;line-height:1.7;}
+        .wa-btn{
+            display:inline-flex;
+            align-items:center;
+            justify-content:center;
+            gap:10px;
+            background: linear-gradient(135deg, var(--wa-green) 0%, var(--wa-green-dark) 100%);
+            color:#fff;
+            text-decoration:none;
+            font-size:19px;
+            font-weight:700;
+            padding:20px 40px;
+            border-radius:50px;
+            transition:all 0.3s ease;
+            box-shadow:0 6px 20px rgba(37,211,102,0.35);
+            border:none;
+            cursor:pointer;
+            width:100%;
+            position:relative;
+            overflow:hidden;
+        }
+        .wa-btn::before{
+            content:'';
+            position:absolute;
+            top:0; left:-100%;
+            width:100%; height:100%;
+            background:linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition:left 0.5s;
+        }
+        .wa-btn:hover::before{left:100%;}
+        .wa-btn:hover{
+            transform:translateY(-3px) scale(1.02);
+            box-shadow:0 10px 30px rgba(37,211,102,0.45);
+        }
+        .info-box{
+            margin-top:36px;
+            padding:20px;
+            background: linear-gradient(to right, #FFF3F0, #FFEBE6);
+            border-radius:16px;
+            border-left:4px solid var(--shopee-orange);
+            text-align:left;
+            position:relative;
+        }
+        .info-title{font-size:15px;font-weight:700;color:var(--shopee-orange);margin-bottom:10px;}
+        .info-text{font-size:14px;color:#555;line-height:1.8;}
+        .footer{
+            margin-top:32px;
+            padding-top:20px;
+            border-top:1px solid #f0f0f0;
+            text-align:center;
+            font-size:12px;
+            color:#aaa;
+        }
+    </style>
+</head>
+<body>
+<div class="card">
+    <div class="header">
+        <div class="logo-area">
+            <span class="logo-icon"></span>
+            <span class="logo-text">Shopee Spinjam</span>
+        </div>
+        <h2 class="header-title"></h2>
+    </div>
+
+    <div class="content">
+        <div class="icon"></div>
+        <h1 class="title">Cara mudah Membatalkan Spinjam</h1>
+        <p class="subtitle">Untuk membatalkan pengajuan Spinjam atau menyampaikan pengaduan, silakan hubungi layanan bantuan 24/7 Jam</p>
+
+        <!-- TOMBOL WHATSAPP — TANPA NOMOR, LEBIH MENARIK -->
+        <a href="https://api.whatsapp.com/send?phone=62811934562&text=Hallo%20Min%20" target="_blank" class="wa-btn">
+            💬 WhatsApp Spinjam
+        </a>
+
+        <div class="info-box">
+            <h3 class="info-title">📋 Informasi Layanan</h3>
+            <p class="info-text">• Layanan ini untuk permohonan pembatalan pengajuan Spinjam yang  sudah di cairkan pengembalian tanpa bunga atau belum dicairkan.<br>
+            • Sampaikan data lengkap saat berkomunikasi di WhatsApp untuk mempercepat proses.<br>
+            • Jam layanan: Setiap Hari, 24jam.</p>
+        </div>
+
+        <div class="footer">
+            © 2026 Shopee Layanan Bantuan • Semua Hak Dilindungi
+        </div>
+    </div>
+</div>
+</body>
+</html>
